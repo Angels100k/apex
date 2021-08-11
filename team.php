@@ -16,6 +16,14 @@ $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<script src="js/team-min.js"></script>
+<script>
+    var f = 0;
+  var i = 0;
+  var data1;
+  var data2;
+  var join1;
+</script>
 <?php
 include_once 'head.php';
 if ($result->num_rows > 0 && $result->num_rows != 1 && $result->num_rows <= 3) {
@@ -82,54 +90,16 @@ if ($result->num_rows > 0) {
     echo "0 results";
   }
 ?> 
-<style>
-    .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 300px;
-        margin: auto;
-        text-align: center;
-    }
-
-    .title {
-        color: grey;
-        font-size: 18px;
-    }
-
-    button {
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-    }
-
-    a {
-        text-decoration: none;
-        font-size: 22px;
-        color: black;
-    }
-
-    button:hover,
-    a:hover {
-        opacity: 0.7;
-    }
-</style>
+<link rel="stylesheet" href="style/team-min.css"/>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script>
-  var f = 0;
-  var i = 0;
-  var data1;
-  var data2;
-  var join1;
 
-</script>
 <body>
-<div id="curve_chart"></div>
+<?php include_once 'background.php'?>
+
+<div class="container mb-3">
+<div id="curve_chart">
+</div>
+</div>
 <div class="container">
 <div id="row" class="row">
     </div>
@@ -139,88 +109,11 @@ if ($result->num_rows > 0) {
     <div class="col text-center">
     </div>
     <div class="col text-center">
-      <a href="/account" style="color:black; " class="btn-submit mx-auto d-block px-5 btn-bg mt-5 btn-lg border-0 rounded" >Account</a>
+      <a href="/account" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 btn-lg border-0 rounded" >Account</a>
     </div>
     <div class="col text-center">
     </div>
   </div>
 </div>
-    <script>
-        var number1;
-        var number2;
-        var name1;
-        var name2;
-    function datums(data, name, f){
-      if(f == 1){
-        number1 = data;
-        name1 = name
-      }
-      if(f == 2){
-        number2 = data;
-        name2 = name;
-      }
-      if(f == 3){
-        var number3 = data;
-        var name3 = name;
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(function(){drawChart(number1, number2, number3, name1, name2, name3)});
-      }
-    }
-    function datums2(data, name, f){
-      if(f == 1){
-        number1 = data;
-        name1 = name
-      }
-      if(f == 2){
-        number2 = data;
-        name2 = name;
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(function(){drawChart2(number1, number2, name1, name2)});
-      }
-    }
-    function drawChart(number1, number2, number3, name1, name2, name3) {
-        data1 = new google.visualization.DataTable();
-        data1.addColumn({label: 'datum'});
-        data1.addColumn({label: name1, type: 'number'});
-        data1.addRows(JSON.parse(number1));
-
-        data2 = new google.visualization.DataTable();
-        data2.addColumn({label: 'datum'});
-        data2.addColumn({label: name2, type: 'number'});
-        data2.addRows(JSON.parse(number2));
-        var join1 = google.visualization.data.join(data1, data2, 'full', [[0,0]], [1], [1]);
-
-        data3 = new google.visualization.DataTable();
-        data3.addColumn({label: 'datum'});
-        data3.addColumn({label: name3, type: 'number'});
-        data3.addRows(JSON.parse(number3));
-        var join2 = google.visualization.data.join(join1, data3, 'full', [[0,0]], [1,2], [1]);
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-        var options = {
-          title: 'Team Performance',
-          legend: { position: 'bottom' }
-        };
-        chart.draw(join2, options);
-    }
-    function drawChart2(number1, number2, name1, name2) {
-        data1 = new google.visualization.DataTable();
-        data1.addColumn({label: 'datum'});
-        data1.addColumn({label: name1, type: 'number'});
-        data1.addRows(JSON.parse(number1));
-
-        data2 = new google.visualization.DataTable();
-        data2.addColumn({label: 'datum'});
-        data2.addColumn({label: name2, type: 'number'});
-        data2.addRows(JSON.parse(number2));
-
-        var join2 = google.visualization.data.join(data1, data2, 'full', [[0,0]], [1], [1]);
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-        var options = {
-          title: 'Team Performance',
-          legend: { position: 'bottom' }
-        };
-        chart.draw(join2, options);
-    }
-    </script>
 </body>
 </html>

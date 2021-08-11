@@ -11,10 +11,10 @@ html, body {
 .bg-light :is(img) {
     border-radius: 20px;
 }
-
+/* 
 .btn-bg {
     background-color: #FFA200;
-}
+} */
 
 .item-container {
     margin-left: auto;
@@ -38,12 +38,30 @@ html, body {
     outline: none;
 }
 
-.inputs :is(.btn-submit),
+/* .inputs :is(.btn-submit),
 .button {
     color: white;
     background-color: #ffc107;
-}
+} */
 
+.button,
+.inputs input[type=text]:focus,
+.inputs input[type=email]:focus,
+.btn-bg {
+    background: linear-gradient(to right, #6065d9, #17d7fa);
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    display: block;
+    height: 40px;
+    margin: 0 auto;
+    outline: none;
+    cursor: pointer;
+  }
+
+  
 @media screen and (max-width:850px) {
     .main {
         width: 100%;

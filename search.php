@@ -5,7 +5,6 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="nl">
-<link rel="stylesheet" href="style/adminpanel.css">
 <style>
     .custom-select {
         position: relative;
@@ -19,7 +18,7 @@ session_start();
     }
 
     .select-selected {
-        background-color: #FFA200;
+        background: linear-gradient(to right, #6065d9, #17d7fa);
     }
 
     /* Style the arrow inside the select element: */
@@ -53,7 +52,7 @@ session_start();
     /* Style items (options): */
     .select-items {
         position: absolute;
-        background-color: #FFA200;
+        background: linear-gradient(to right, #6065d9, #17d7fa);
         top: 100%;
         left: 0;
         right: 0;
@@ -110,6 +109,7 @@ session_start();
 <?php include_once 'head.php'?>
 <!-- C2fxwdoK2Mlt4CNXiUuP -->
 <body>
+<?php include_once 'background.php'?>
 
     <div class="main mx-auto container">
         <div class="row">
@@ -130,7 +130,7 @@ session_start();
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-3">
-                        <button onclick="account()" id="button" style="color:black;" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 btn-lg border-0 rounded">search</button>
+                        <button onclick="account()" id="button" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 btn-lg border-0 rounded">search</button>
                     </div>
                 </div>
             </div>

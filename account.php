@@ -15,7 +15,7 @@ if($_SESSION["ID"]){
 <?php include_once 'head.php'?>
 
 <body>
-
+  <?php include_once 'background.php'?>
   <div class="main mx-auto container">
     <h2 style="text-align: center; font-weight: bold;">Points Panel</h2>
     <div id="line_chart" style="height:200px;" class="col-12 mx-auto"></div>
@@ -32,7 +32,7 @@ if($_SESSION["ID"]){
     </div>
 
     <input type="submit" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 btn-lg border-0 rounded" name="verstuur" value="Opsturen naar DB">
-    <a href="/team" style="color:black; " class="btn-submit mx-auto d-block px-5 btn-bg mt-5 btn-lg border-0 rounded" >Team</a>
+    <a href="/team" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 btn-lg border-0 rounded" >Team</a>
 
     </form>
     <h2 style="text-align: center; font-weight: bold;">Arenas</h2>

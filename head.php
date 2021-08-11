@@ -9,10 +9,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script> 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    
+
     <link rel="stylesheet" href="style/bootstrap.min.css">
-    <link rel="stylesheet" href="style/all-min.css">
+    <!-- <link rel="stylesheet" href="style/all-min.css"> -->
 
     <link rel="stylesheet" href="style/main-min.css">
     <link rel="stylesheet" href="style/Sweatalerts-min.css">
+
+    <link rel="stylesheet" href="style/background-min.css">    
 </head>
