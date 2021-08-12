@@ -91,7 +91,6 @@ if ($result->num_rows > 0) {
   }
 ?> 
 <!-- <link rel="stylesheet" href="style/team-min.css"/> -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <body>
 <?php include_once 'background.php'?>

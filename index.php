@@ -10,6 +10,7 @@ if($_SESSION["ID"]){
 <html>
 <?php include_once "head.php";?>
 <link rel="stylesheet" href="style/index-min.css">
+<script src="js/sweetalert-min.js"></script>
 
 <body>
   <?php include_once 'background.php'?>

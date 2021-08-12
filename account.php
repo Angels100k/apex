@@ -31,7 +31,7 @@ if($_SESSION["ID"]){
       <input type="date" id="date"  class="form-control" name="date" onchange="selectDate(this.value)">
     </div>
 
-    <input type="submit" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 mb-3 btn-lg border-0 rounded" name="verstuur" value="Sent">
+    <input type="submit" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 mb-3 btn-lg border-0 rounded" name="verstuur" value="Send">
 
     </form>
     <h2 style="text-align: center; font-weight: bold;">Arenas</h2>
@@ -45,7 +45,7 @@ if($_SESSION["ID"]){
       <input type="date" id="dateArenas"  class="form-control" name="dateArenas" onchange="selectDateArenas(this.value)">
     </div>
 
-    <input type="submit" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 mb-3 btn-lg border-0 rounded" name="verstuur" value="Sent">
+    <input type="submit" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 mb-3 btn-lg border-0 rounded" name="verstuur" value="Send">
 
     </form>
     <div class="row mt-3">
