@@ -19,6 +19,7 @@ $result = $conn->query($sql);
 <script src="js/team-min.js"></script>
 <script>
     var f = 0;
+    var a = 0;
   var i = 0;
   var data1;
   var data2;
@@ -38,11 +39,26 @@ if ($result->num_rows > 0 && $result->num_rows != 1 && $result->num_rows <= 3) {
             },
           url: "testJson.php",
           //  when it is a sucsess so this with the data it got back
-          success: function(data)
+          success: function(databr)
           {
             var name = "'.$row['Name'].'"
             f++;
-              datums(data, name, f);
+              datums(databr, name, f);
+          }
+        });
+      $.ajax({
+          type: "POST",
+          data:{
+              Name: "'.$row['Name'].'", // Second add quotes on the value.
+            },
+          url: "testJsonarenas.php",
+          //  when it is a sucsess so this with the data it got back
+          success: function(dataarenas)
+          {
+            var name = "'.$row['Name'].'"
+            a++;
+            datumsarenas(dataarenas, name, a);
+              
           }
         });
       </script>';
@@ -60,6 +76,20 @@ if ($result->num_rows > 0 && $result->num_rows != 1 && $result->num_rows <= 3) {
             var name = "'.$row['Name'].'"
             f++;
             datums2(data, name, f);
+          }
+        });
+      $.ajax({
+          type: "POST",
+          data:{
+              Name: "'.$row['Name'].'", // Second add quotes on the value.
+            },
+          url: "testJsonarenas.php",
+          //  when it is a sucsess so this with the data it got back
+          success: function(data)
+          {
+            var name = "'.$row['Name'].'"
+            f++;
+            datums2arenas(data, name, f);
           }
         });
       </script>';
@@ -97,7 +127,9 @@ if ($result->num_rows > 0) {
 <?php include_once 'navbar.php'?>
 
 <div class="container mb-3">
-<div id="curve_chart">
+<div id="curve_chart" class="mb-3">
+</div>
+<div id="arenas_chart">
 </div>
 </div>
 <div class="container">
