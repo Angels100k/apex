@@ -110,6 +110,7 @@ session_start();
 <!-- C2fxwdoK2Mlt4CNXiUuP -->
 <body>
 <?php include_once 'background.php'?>
+<?php include_once 'navbar.php'?>
 
     <div class="main mx-auto container">
         <div class="row">

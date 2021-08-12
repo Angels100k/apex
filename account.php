@@ -10,12 +10,12 @@ if($_SESSION["ID"]){
 ?>
 <!DOCTYPE html>
 <html lang="nl">
-<link rel="stylesheet" href="style/adminpanel.css">
 <!-- plaatst de head van de site -->
 <?php include_once 'head.php'?>
 
 <body>
   <?php include_once 'background.php'?>
+  <?php include_once 'navbar.php'?>
   <div class="main mx-auto container">
     <h2 style="text-align: center; font-weight: bold;">Points Panel</h2>
     <div id="line_chart" style="height:200px;" class="col-12 mx-auto"></div>
@@ -31,8 +31,7 @@ if($_SESSION["ID"]){
       <input type="date" id="date"  class="form-control" name="date" onchange="selectDate(this.value)">
     </div>
 
-    <input type="submit" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 btn-lg border-0 rounded" name="verstuur" value="Opsturen naar DB">
-    <a href="/team" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 btn-lg border-0 rounded" >Team</a>
+    <input type="submit" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 mb-3 btn-lg border-0 rounded" name="verstuur" value="Sent">
 
     </form>
     <h2 style="text-align: center; font-weight: bold;">Arenas</h2>
@@ -46,7 +45,7 @@ if($_SESSION["ID"]){
       <input type="date" id="dateArenas"  class="form-control" name="dateArenas" onchange="selectDateArenas(this.value)">
     </div>
 
-    <input type="submit" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 btn-lg border-0 rounded" name="verstuur" value="Opsturen naar DB">
+    <input type="submit" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 mb-3 btn-lg border-0 rounded" name="verstuur" value="Sent">
 
     </form>
     <div class="row mt-3">

@@ -90,11 +90,12 @@ if ($result->num_rows > 0) {
     echo "0 results";
   }
 ?> 
-<link rel="stylesheet" href="style/team-min.css"/>
+<!-- <link rel="stylesheet" href="style/team-min.css"/> -->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <body>
 <?php include_once 'background.php'?>
+<?php include_once 'navbar.php'?>
 
 <div class="container mb-3">
 <div id="curve_chart">
@@ -103,17 +104,6 @@ if ($result->num_rows > 0) {
 <div class="container">
 <div id="row" class="row">
     </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col text-center">
-    </div>
-    <div class="col text-center">
-      <a href="/account" class="btn-submit mx-auto d-block px-5 btn-bg mt-5 btn-lg border-0 rounded" >Account</a>
-    </div>
-    <div class="col text-center">
-    </div>
-  </div>
 </div>
 </body>
 </html>
