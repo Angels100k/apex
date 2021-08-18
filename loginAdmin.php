@@ -20,7 +20,11 @@ if ($result->num_rows > 0) {
      $_SESSION["ID"] = $row['ID']; 
      $_SESSION["team"] = $row['Team']; 
      $_SESSION["name"] = $_POST['username']; 
-     echo json_encode($row);
+     $info = $row;
+     $sql = "UPDATE person SET ip='".$_SERVER['REMOTE_ADDR']."' WHERE id=".$_SESSION["ID"];
+     if ($conn->query($sql) === TRUE) {
+      echo json_encode($info);
+    } 
     }
   }
 }
